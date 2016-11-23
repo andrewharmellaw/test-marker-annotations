@@ -1,0 +1,19 @@
+plugins {
+    id 'net.researchgate.release' version '2.3.4'
+}
+
+group 'com.capgemini'
+
+apply plugin: 'java'
+apply plugin: 'maven'
+
+repositories {
+    mavenLocal()
+    mavenCentral()
+}
+
+dependencies {}
+
+release {
+    buildTasks = ['clean', 'build', 'install']
+}
